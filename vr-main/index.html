@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casa VR - Menu Inicial</title>
+  <style>
+    body { 
+      margin: 0; 
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      height: 100vh; 
+      font-family: Arial, sans-serif; 
+      background-color: #2c3e50; 
+      color: white; 
+    }
+    .start-button {
+      padding: 20px 40px;
+      font-size: 24px;
+      cursor: pointer;
+      border: none;
+      border-radius: 25px;
+      background-color: #3498db;
+      color: #fff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+    }
+    .start-button:hover {
+      background-color: #2980b9;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    }
+    .fade-out {
+      animation: fadeOut 1s forwards;
+    }
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="start-button" onclick="startVR()">Começar</button>
+  <script>
+    function startVR() {
+      document.querySelector('.start-button').classList.add('fade-out');
+      setTimeout(() => {
+        window.location.href = 'rioVR.html';
+      }, 1000); 
+    }
+  </script>
+</body>
+</html>
